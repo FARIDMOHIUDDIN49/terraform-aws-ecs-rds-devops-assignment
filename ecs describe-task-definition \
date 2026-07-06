@@ -1,0 +1,123 @@
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:ap-south-1:420551259402:service/tripare-dev-cluster/tripare-dev-service",
+            "serviceName": "tripare-dev-service",
+            "clusterArn": "arn:aws:ecs:ap-south-1:420551259402:cluster/tripare-dev-cluster",
+            "loadBalancers": [
+                {
+                    "targetGroupArn": "arn:aws:elasticloadbalancing:ap-south-1:420551259402:targetgroup/tripare-dev-tg/ceeb41c2eb179006",
+                    "containerName": "app",
+                    "containerPort": 80
+                }
+            ],
+            "serviceRegistries": [],
+            "status": "ACTIVE",
+            "desiredCount": 1,
+            "runningCount": 1,
+            "pendingCount": 0,
+            "launchType": "FARGATE",
+            "platformVersion": "LATEST",
+            "platformFamily": "Linux",
+            "taskDefinition": "arn:aws:ecs:ap-south-1:420551259402:task-definition/tripare-dev-task:1",
+            "deploymentConfiguration": {
+                "deploymentCircuitBreaker": {
+                    "enable": false,
+                    "rollback": false
+                },
+                "maximumPercent": 200,
+                "minimumHealthyPercent": 100,
+                "strategy": "ROLLING",
+                "bakeTimeInMinutes": 0
+            },
+            "deployments": [
+                {
+                    "id": "ecs-svc/3398220858403883676",
+                    "status": "PRIMARY",
+                    "taskDefinition": "arn:aws:ecs:ap-south-1:420551259402:task-definition/tripare-dev-task:1",
+                    "desiredCount": 1,
+                    "pendingCount": 0,
+                    "runningCount": 1,
+                    "failedTasks": 0,
+                    "createdAt": "2026-07-06T10:52:42.451000+00:00",
+                    "updatedAt": "2026-07-06T10:53:38.478000+00:00",
+                    "launchType": "FARGATE",
+                    "platformVersion": "1.4.0",
+                    "platformFamily": "Linux",
+                    "networkConfiguration": {
+                        "awsvpcConfiguration": {
+                            "subnets": [
+                                "subnet-012db62bec3e4a03b",
+                                "subnet-0afebb7977a4ede21"
+                            ],
+                            "securityGroups": [
+                                "sg-0f213f285c066f590"
+                            ],
+                            "assignPublicIp": "DISABLED"
+                        }
+                    },
+                    "rolloutState": "COMPLETED",
+                    "rolloutStateReason": "ECS deployment ecs-svc/3398220858403883676 completed."
+                }
+            ],
+            "roleArn": "arn:aws:iam::420551259402:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+            "events": [
+                {
+                    "id": "6cc6f851-db95-4d3b-859e-9bb402807711",
+                    "createdAt": "2026-07-06T10:53:38.484000+00:00",
+                    "message": "(service tripare-dev-service) has reached a steady state."
+                },
+                {
+                    "id": "89d49cac-c4e3-44ca-9924-a46e65ca783a",
+                    "createdAt": "2026-07-06T10:53:38.483000+00:00",
+                    "message": "(service tripare-dev-service) (deployment ecs-svc/3398220858403883676) deployment completed."
+                },
+                {
+                    "id": "dbede3d0-e426-4e5d-b628-fd1f54d5f675",
+                    "createdAt": "2026-07-06T10:53:28.960000+00:00",
+                    "message": "(service tripare-dev-service) registered 1 targets in (target-group arn:aws:elasticloadbalancing:ap-south-1:420551259402:targetgroup/tripare-dev-tg/ceeb41c2eb179006)"
+                },
+                {
+                    "id": "2b472d12-139b-44cb-bed4-15d39a664ac2",
+                    "createdAt": "2026-07-06T10:52:57.567000+00:00",
+                    "message": "(service tripare-dev-service) has started 1 tasks: (task c9e60b0227cc46a184322e92c7e7b226)."
+                }
+            ],
+            "createdAt": "2026-07-06T10:52:42.451000+00:00",
+            "currentServiceRevisions": [
+                {
+                    "arn": "arn:aws:ecs:ap-south-1:420551259402:service-revision/tripare-dev-cluster/tripare-dev-service/3398220858403883676",
+                    "requestedTaskCount": 1,
+                    "runningTaskCount": 1,
+                    "pendingTaskCount": 0
+                }
+            ],
+            "placementConstraints": [],
+            "placementStrategy": [],
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-012db62bec3e4a03b",
+                        "subnet-0afebb7977a4ede21"
+                    ],
+                    "securityGroups": [
+                        "sg-0f213f285c066f590"
+                    ],
+                    "assignPublicIp": "DISABLED"
+                }
+            },
+            "healthCheckGracePeriodSeconds": 0,
+            "schedulingStrategy": "REPLICA",
+            "deploymentController": {
+                "type": "ECS"
+            },
+            "createdBy": "arn:aws:iam::420551259402:role/ec2admin-accessrole",
+            "enableECSManagedTags": false,
+            "propagateTags": "NONE",
+            "enableExecuteCommand": false,
+            "availabilityZoneRebalancing": "DISABLED",
+            "resourceManagementType": "CUSTOMER"
+        }
+    ],
+    "failures": []
+}
